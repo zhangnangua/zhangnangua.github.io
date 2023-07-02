@@ -5,7 +5,7 @@
     <title>Howie Blog</title>
     <link rel="icon" href="img/me.jpg" type="img/x-ico" />
     <!-- meta -->
-    <meta name="Keywords" content=""/>
+    <meta name="Keywords" content="" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -23,69 +23,51 @@
 </head>
 
 <body>
-    <embed type="text/html" width="100%" src="header.html" />
+    <div class="container">
+        <header id="site-header">
+            <div class="row">
+                <div class="col-md-4 col-sm-5 col-xs-8">
+                    <div class="logo">
+                        <h1><a href="index.html"><b>Howie 😊</b></a></h1>
+                    </div>
+                </div><!-- col-md-4 -->
+                <div class="col-md-8 col-sm-7 col-xs-4">
+                    <nav class="main-nav" role="navigation">
+                        <div class="navbar-header">
+                            <button type="button" id="trigger-overlay" class="navbar-toggle">
+                                <span class="ion-navicon"></span>
+                            </button>
+                        </div>
+
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav navbar-right">
+                                <!-- <li class="cl-effect-11"><a href="index.html" data-hover="首页">首页</a></li> -->
+                                <!-- <li class="cl-effect-11"><a href="full-width.html" data-hover="博客">博客</a></li> -->
+                                <li class="cl-effect-11"><a href="categorize.html" data-hover="关于">分类</a></li>
+                                <li class="cl-effect-11"><a href="#" data-hover="联系">联系</a></li>
+                            </ul>
+                        </div><!-- /.navbar-collapse -->
+                    </nav>
+                    <div id="header-search-box">
+                        <a id="search-menu" href="#"><span id="search-icon" class="ion-ios-search-strong"></span></a>
+                        <div id="search-form" class="search-form">
+                            <form role="search" method="get" id="searchform" action="#">
+                                <input type="search" placeholder="搜索" required>
+                                <button type="submit"><span class="ion-ios-search-strong"></span></button>
+                            </form>
+                        </div>
+                    </div>
+                </div><!-- col-md-8 -->
+            </div>
+        </header>
+    </div>
+
 
     <div class="content-body">
         <div class="container">
             <div class="row">
                 <main class="col-md-8">
-                    <article class="post post-1">
-                        <header class="entry-header">
-                            <h1 class="entry-title">
-                                <p>Howie的个人博客</p>
-                            </h1>
-                            <div class="entry-meta">
-                                <span class="views-count"><a>路漫漫其修远兮 吾将上下而求索</a></span>
-                            </div>
-                        </header>
-                        <div class="entry-content clearfix">
-                            <p>欢迎来到我的个人博客！这里是一个专注于分享移动开发的技术平台，我将与大家分享我的学习、实践和经验。</p>
-                            <p>我是一个热衷于编程和移动开发的技术爱好者。在这个博客中，您将找到各种与移动开发开发相关的文章，包括教程、指南、技巧和最佳实践。
-                                无论您是初学者还是有经验的开发者，这个博客都将为您提供有价值的内容。我将努力以易于理解和实践的方式解释复杂的概念，并提供示例代码和项目案例供您参考和学习。</p>
-                            <p>这里没有复杂的界面、没有花里胡哨的动效、只有最硬核的技术文章！！！</p>
-                            <div class="read-more cl-effect-14">
-                                <a href="#" class="more-link">继续阅读 <span class="meta-nav">→</span></a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- <div class="posts-container mx-auto px-3 py-5">
-                        <h3>2023</h3>
-                        <ul class="list mb-5">
-                            <li>
-                                <a href="#">Bootstrap 5.3.0</a>
-                                <span title="30 May 23 07:35 UTC">May 30, 2023</span>
-                            </li>
-                            <li>
-                                <a href="#">Bootstrap 5.3.0-alpha3</a>
-                                <span title="03 Apr 23 07:35 UTC">Apr 03, 2023</span>
-                            </li>
-                            <li>
-                                <a href="#">Bootstrap 5.3.0-alpha2</a>
-                                <span title="24 Mar 23 14:40 UTC">Mar 24, 2023</span>
-                            </li>
-                        </ul>
-                    </div> -->
-                    <!-- 简单分页效果
-                <div class="pagination-simple">
-                    <a href="#">上一页</a>
-                    <span class="current">第 6 页 / 共 11 页</span>
-                    <a href="#">下一页</a>
-                </div>
-                -->
-                    <!-- <div class="pagination">
-                    <ul>
-                        <li><a href="">1</a></li>
-                        <li><a href="">...</a></li>
-                        <li><a href="">4</a></li>
-                        <li><a href="">5</a></li>
-                        <li class="current"><a href="">6</a></li>
-                        <li><a href="">7</a></li>
-                        <li><a href="">8</a></li>
-                        <li><a href="">...</a></li>
-                        <li><a href="">11</a></li>
-                    </ul>
-                </div> -->
+                    <div id="content"></div>
                 </main>
                 <aside class="col-md-4">
                     <div class="widget widget-recent-posts">
@@ -132,7 +114,7 @@
                         </ul>
                     </div>
 
-                    <div class="widget widget-tag-cloud">
+                    <!-- <div class="widget widget-tag-cloud">
                         <h3 class="widget-title">标签云</h3>
                         <ul>
                             <li>
@@ -166,7 +148,7 @@
                                 <a href="#">jQuery</a>
                             </li>
                         </ul>
-                    </div>
+                    </div> -->
                     <div class="rss">
                         <a href=""><span class="ion-social-rss-outline"></span> RSS 订阅</a>
                     </div>
@@ -189,15 +171,20 @@
         <button type="button" class="overlay-close"><span class="ion-ios-close-empty"></span></button>
         <nav>
             <ul>
-                <li><a href="index.html">首页</a></li>
-                <li><a href="full-width.html">博客</a></li>
-                <li><a href="about.html">关于</a></li>
-                <li><a href="contact.html">联系</a></li>
+                <li><a href="categorize.html" data-hover="关于">分类</a></li>
+                <li><a href="#" data-hover="联系">联系</a></li>
             </ul>
         </nav>
     </div>
 
     <script src="js/script.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            $('#content').load('https://zhangnangua.github.io/content/Android 窗口机制.html');
+        });
+
+    </script>
 
 </body>
 
