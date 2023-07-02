@@ -1715,7 +1715,7 @@
             <p><span>接下来的几篇文章会详细的介绍窗口加载过程，本篇文章整体介绍Android 窗口类整体结构关系图。</span></p>
         </blockquote>
         <p><strong><span>窗口结构图</span></strong></p>
-        <p><img src="E:\Documentation\My_Learn_Documentation_Git\android\pic_android\window_structure_diagram.png"
+        <p><img src="pic_android\window_structure_diagram.png"
                 style="zoom:50%;" /></p>
         <p><span>好像和大家平时看到的窗口架构图不一太一样是吧，因为我看到sdk31的源码里，</span><code>setContentView</code><span>会委托给</span><code>AppCompatDelegateImpl</code><span>的</span><code>setContentView</code><span>进行处理。而在</span><code>AppCompatDelegateImpl</code><span>的</span><code>setContentView</code><span>方法里面，额外添加了一层</span><code>SubDecor</code><span>。这一块大家可以先看看，之后都会进行详细的源码分析。</span>
         </p>
@@ -1746,7 +1746,7 @@
             </li>
             <li>
                 <p><strong><span>WindowManagerImpl</span></strong></p>
-                <p><img src="E:\Documentation\My_Learn_Documentation_Git\android\pic_android\WindowManagerImpl.png"
+                <p><img src="pic_android\WindowManagerImpl.png"
                         referrerpolicy="no-referrer"></p>
                 <p><span>WindowManager的具体实现，内部持有了</span><code>mGlobal</code><span>成员变量。它是WindowManagerGlobal类型的单例对象，具体的窗口管理功能是由WindowManagerGlobal来进行。</span>
                 </p>
@@ -3433,7 +3433,7 @@
     <p><strong><span>事件是如何被接收的呢？</span></strong></p>
     <p><span>首先需要思考一个问题，事件是如何传递到ViewGroup呢？</span></p>
     <p><span>我们都知道Android底层是Linux内核，所以事件的传递过程大概如下所示：</span></p>
-    <p><img src="E:\Documentation\My_Learn_Documentation_Git\android\pic_android\event_deliver.jpg"
+    <p><img src="pic_android\event_deliver.jpg"
             referrerpolicy="no-referrer" alt="event_deliver"></p>
     <p>&nbsp;</p>
     <p><span>在Android系统开机的过程中，会启动许多系统服务，其中包括</span><code>InputManagerService</code><span>用来监听事件的输入，而</span><code>WindowManagerService</code><span>作为事件输入中转站，管理输入事件，配合</span><code>InputManagerService</code><span>将输入事件交由合适的</span><code>Window</code><span>，即最终传输到</span><code>ViewRootImpl</code><span>的</span><code>InputChannel</code><span>，最终被</span><code>ViewRootImpl</code><span>的</span><code>WindowInputEventReceiver</code><span>所接受。</span>
@@ -4007,7 +4007,7 @@
     <p>&nbsp;</p>
     <p><strong><span>总结</span></strong></p>
     <p><span>直接看流程图就好</span></p>
-    <p><img src="E:\Documentation\My_Learn_Documentation_Git\android\pic_android\event_deliver1.jpg"
+    <p><img src="pic_android\event_deliver1.jpg"
             alt="event_deliver1" style="zoom:50%;" /></p>
     <h2><a name="一定要在主线程才可以更新ui吗为什么" class="md-header-anchor"></a><span>一定要在主线程才可以更新UI吗？为什么？</span></h2>
     <blockquote>
